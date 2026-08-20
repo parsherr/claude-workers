@@ -1,15 +1,37 @@
 > **Bağlantılar:** [[CLAUDE]] | [[kiwimi-workers/the-project-idea]] | [[work-management-system-session-notes]]
 
-# Agent Generator — Core Idea
+# Agent Generator — Temel Fikir
 
-iyi agentlar nasil yazilir arastirma yapilsin
+## Ne?
+İyi, yeniden kullanılabilir Claude agent'ları üretmek için bir meta-agent sistemi.
+Agent Generator kendi başına bir agent'tır; ona "şu işi yapan bir agent lazım"
+dersin, o da sana hazır, optimize edilmiş bir agent dosyası çıkarır.
 
-iyi agent yazmak icin kurallar listesi cikartilsin ve ornek bi kac agent alinsin
+## Neden?
+Her projede benzer agent'lar sıfırdan yazılıyor. İyi agent yazmak zordur:
+doğru tool seçimi, doğru system prompt yapısı, doğru completion kriterleri gerektirir.
+Bu bilgiyi bir kez biriktirip defalarca kullanmak gerekiyor.
 
-birbirleriyle iletisim halinde calisan bir agent takimi nasil tasarlanir arastirmasi yapilsin
+## Nasıl Yapılacak — Adım Adım
 
-boyle bir agent takimi kurma hakkinda bir dosya yazilsin
+### Adım 1: İyi Agent Yazmanın Kurallarını Çıkar
+- Araştırma: iyi agent ne demek? (tool seçimi, system prompt, completion, hata yönetimi)
+- Çıktı: `agent-generator/rules.md` — best practice listesi
 
-bu agentlari global scope icin yazan (genel, tum projelerde kullanilabielcek ve takim halinda calisacak agentlar) bir agent generator agnet yazilsin
+### Adım 2: Örnek Agent'ları İncele
+- Mevcut projelerdeki agent'lar analiz edilir
+- Ortak pattern'lar ve anti-pattern'lar belgelenir
 
-bir agenta ihtiyac duyulursa bu agent creator agenttan istensizn ve en optimal agenti olustursun bu agent global scopta, tum team kurgularini fln agent-generator agenti yapsin ve harika bir agent cikarsin
+### Adım 3: Takım Hâlinde Çalışan Agent'ları Araştır
+- Multi-agent coordination: nasıl iletişim kuruyorlar?
+- Hangi pattern'lar işe yarıyor? (Supervisor/Worker, Peer-to-peer, Pipeline…)
+- Çıktı: `agent-generator/team-patterns.md`
+
+### Adım 4: Agent Generator Agent'ı Yaz
+- Input: kullanıcının ihtiyaç tanımı (doğal dil)
+- Output: optimize edilmiş `.md` agent dosyası (global scope için)
+- Agent; rules.md + team-patterns.md bilgisini kullanarak optimal agent'ı üretir
+
+## Kapsam
+**Global scope** — üretilen agent'lar tüm projelerde kullanılabilir,
+takım kurguları da dahil (multi-agent team template'leri).

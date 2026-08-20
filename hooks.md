@@ -12,7 +12,7 @@
 Claude bir yanıt verip durmak istediğinde, bu hook devreye girer ve şunu sorar:
 **"Claude gerçekten işi bitirdi mi, yoksa kullanıcıdan onay bekleyerek yarım mı bıraktı?"**
 
-Eğer yarım bıraktıysa → `exit 2` + stderr mesajı ile Claude'u bloklar ve devam etmeye zorlar.
+Eğer yarım bıraktıysa → stdout'a `{"decision":"block","reason":"..."}` yazar ve `exit 0` ile çıkar.
 Eğer işi bitirdiyse → `exit 0` ile geçer, Claude normal şekilde durur.
 
 ---
@@ -80,8 +80,8 @@ Eğer hash daha önce görüldüyse `exit 0` ile geçer — tekrar bloklama yapm
 sys.stderr.write(block_reason)
 sys.exit(2)
 ```
-`exit 2` → Claude Code'a "dur, devam et" sinyali.
-stderr mesajı → Claude'a gönderilir: "Görevi tamamlamadan durma, devam et."
+`exit 0` + stdout JSON → Claude Code'a "dur, devam et" sinyali.
+`{"decision":"block","reason":"..."}` → Claude'a feedback olarak iletilir.
 
 **Tamamlanmış:**
 ```python
@@ -105,7 +105,7 @@ Normal çıkış, Claude durabilir.
 
 Claude Code Stop hook'ları için exit kodları:
 - `exit 0` → OK, Claude durabilir
-- `exit 2` + stderr → BLOCK, stderr içeriği Claude'a feedback olarak iletilir ve Claude devam eder
+- `exit 0` + stdout `{"decision":"block","reason":"..."}` → BLOCK, reason içeriği Claude'a feedback olarak iletilir ve Claude devam eder
 
 Bu hook tam olarak bu protokolü kullanarak Claude'u "yarım bırakma, devam et" moduna sokar.
 
@@ -124,7 +124,7 @@ Stop Hook tetiklenir
         ↓
 Mesajı çıkar (last_assistant_message veya transcript)
         ↓
-len < 30? → EXIT 0 (geç)
+len < 30? → stdout "{}" + exit 0 (geç)
         ↓
 LLM Check (Haiku via Rusk)
     ↓           ↓
@@ -134,8 +134,39 @@ complete?   Regex Fallback
     ↓           ↓
   TRUE      incomplete?
     ↓           ↓
-EXIT 0      Loop Guard
-            already seen?
+stdout {}   Loop Guard
+exit 0      already seen?
             ↓         ↓
-          EXIT 0   EXIT 2 + stderr → Claude devam eder
+        stdout {}   stdout {"decision":"block","reason":"..."}
+          exit 0         exit 0
 ```
+
+---
+
+## Önemli: Claude Code Stop Hook API (2025+)
+
+Eski API (`exit 2 + stderr`) artık çalışmıyor. Yeni API:
+
+| Durum | stdout | exit code |
+|-------|--------|-----------|
+| Approve (geç) | `{}` | 0 |
+| Block (devam et) | `{"decision": "block", "reason": "..."}` | 0 |
+
+`exit 2` → "JSON validation failed" hatası verir. Her durumda `exit 0` kullan, stdout'a JSON yaz.
+
+---
+
+## /goal Komutu ile Etkileşim
+
+`/goal` komutu Claude Code'un builtin özelliği — session-scoped stop hook ekler.
+
+**⚠️ KULLANMA:** `/goal` komutu "JSON validation failed" hatasına yol açıyor. Condition text'i shell command olarak çalıştırmaya çalışıyor, bu başarısız olunca geçersiz JSON üretiyor.
+
+**Kural:** Bu projede `/goal` kullanılmaz. `check-completion.py` zaten aynı işlevi (ve daha fazlasını) yapıyor.
+
+Eğer yanlışlıkla `/goal` kullandıysan: `/goal clear` ile session hook'unu temizle, ardından yeni bir oturum aç.
+
+**`check-completion.py` ne fark yapar:**
+- `/goal`'den farklı olarak LLM semantic check + regex fallback + loop guard kullanır
+- "Yarım bırakma" detection'ı daha güvenilir ve false-positive'den kaçınır
+- Stop hook API'sine (stdout JSON + exit 0) tam uyumludur
