@@ -1,6 +1,6 @@
 # Work Management System — Session Notes
 
-> **Bağlantılar:** [[CLAUDE]] | [[hooks]]
+> **Bağlantılar:** [[CLAUDE]] | [[hooks]] | [[kiwimi-workers/the-project-idea]] | [[agent-generator/core-idea]]
 
 **Tarih:** 2026-08-20
 **Repo:** `parsherr/work-management-system`

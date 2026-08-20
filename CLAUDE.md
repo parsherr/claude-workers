@@ -1,6 +1,6 @@
 # Claude Workers — Proje Rehberi
 
-> **Bağlantılar:** [[hooks]] | [[work-management-system-session-notes]] | [[researches]]
+> **Bağlantılar:** [[hooks]] | [[work-management-system-session-notes]] | [[researches]] | [[kiwimi-workers/the-project-idea]] | [[agent-generator/core-idea]]
 
 Bu dosya, her yeni Claude Code oturumunun projeyi anlaması için yazılmıştır.
 **Her oturumda bu dosyayı oku. Deep research yapacaksan ayrıca [[researches]] dosyasını oku.**
@@ -29,6 +29,10 @@ hooks ←→ CLAUDE ←→ work-management-system-session-notes
         researches
            ↕
    researches/NNN-slug (her research dosyası)
+
+kiwimi-workers/the-project-idea ←→ agent-generator/core-idea
+              ↕                              ↕
+            CLAUDE ←———————————————————→ CLAUDE
 ```
 
 ---
@@ -83,6 +87,8 @@ Elimizde olan:
 - `researches.md` — Research sistemi (yeni kuruldu, backlog dolu)
 - `researches/` — Research dosyaları klasörü (henüz boş)
 - `~/.claude/hooks/check-completion.py` — Stop hook: Claude'u "yarım bırakma" moduna sokar
+- `kiwimi-workers/the-project-idea.md` — Kiwimi Workers proje fikri (birbiriyle bağlantılı)
+- `agent-generator/core-idea.md` — Agent Generator core fikri (birbiriyle bağlantılı)
 
 ---
 
@@ -156,6 +162,8 @@ Detaylar için: [[work-management-system-session-notes]]
 | `hooks.md` | check-completion.py hook analizi |
 | `researches.md` | Research sistemi, kurallar, backlog |
 | `researches/` | Numaralı research dosyaları |
+| `kiwimi-workers/the-project-idea.md` | Kiwimi Workers proje fikri |
+| `agent-generator/core-idea.md` | Agent Generator core fikri |
 | `~/.claude/hooks/check-completion.py` | Aktif stop hook |
 | `~/.claude/settings.json` | Global ayarlar (Rusk gateway, opus-5) |
 
