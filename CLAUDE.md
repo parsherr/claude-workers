@@ -2,7 +2,7 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-> **Bağlantılar:** [[hooks]] | [[work-management-system-session-notes]] | [[researches]] | [[kiwimi-workers/the-project-idea]] | [[agent-generator/core-idea]]
+> **Bağlantılar:** [[hooks]] | [[work-management-system-session-notes]] | [[researches]] | [[kiwimi-workers/the-project-idea]] | [[agent-generator/core-idea]] | [[how-to-make-agent-team-system]]
 
 **Her yeni oturumda bu dosyayı oku. Deep research yapacaksan ayrıca [[researches]] dosyasını oku.**
 
@@ -75,6 +75,7 @@ Model: `claude-opus-5-0` (Rusk gateway) · Platform: Linux (zsh)
 | `agent-generator/anatomy-team-lead.md` | Team Lead agent anatomisi (tam şablon) |
 | `agent-generator/anatomy-worker.md` | Worker agent anatomisi (tam şablon) |
 | `agent-generator/system-design.md` | Spawn + IPC + state machine + Manager Script |
+| `how-to-make-agent-team-system.md` | Global agent team kurulum kılavuzu (Team Lead + 8 Worker) |
 | `~/.claude/hooks/check-completion.py` | Aktif stop hook |
 | `~/.claude/settings.json` | Global ayarlar |
 

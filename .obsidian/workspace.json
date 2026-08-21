@@ -93,7 +93,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "a304223f955442f6",
@@ -197,6 +198,10 @@
   },
   "active": "0f03ef9077b42daf",
   "lastOpenFiles": [
+    "CLAUDE.md.tmp.61838.403133a845f2",
+    "CLAUDE.md.tmp.61838.aada8a416217",
+    "how-to-make-agent-team-system.md",
+    "how-to-make-agent-team-system.md.tmp.61838.6d9d2ea98b24",
     "CLAUDE.md.tmp.131075.9ead7f90ac85",
     "CLAUDE.md.tmp.61838.5fc26e55754f",
     "agent-generator/core-idea.md.tmp.61838.29d49d4599a6",
@@ -208,9 +213,6 @@
     "agent-generator/anatomy-worker.md.tmp.61838.1ea6ce18760c",
     "agent-generator/anatomy-team-lead.md",
     "agent-generator/anatomy-team-lead.md.tmp.61838.942a34d29526",
-    "CLAUDE.md.tmp.131075.4cd5d34f7121",
-    "researches/waiting-researches.md.tmp.27733.501efd34efa9",
-    "researches.md.tmp.27733.d21c6991ac1d",
     "agent-generator/team-patterns.md",
     "researches/006-multi-agent-koordinasyon-pattern.md",
     "researches/005-task-queue-persistence.md",

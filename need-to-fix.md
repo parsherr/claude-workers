@@ -1,3 +1,7 @@
+# buraya claude code kullanirken aldigim errorlari, hatalari ekliyorum
+
+---
+
 - bash denied by auto mode hatasi aldim az once, bu fixlenmeli
 - Bash(# Hangi hook "JSON validation failed" veriyor - her ikisini de test edelim
       MSG='{"session_id":"test","stop_hook_active":true,"last_assistant_message":"Tama
@@ -30,3 +34,7 @@
 - Error: You are not in plan mode. To enter plan mode, call the 
      EnterPlanMode tool first. If your plan was already approved, 
      continue with implementation.
+
+- bash denied by auto mode · Classifier unavailable · /permissions
+
+## NOT : Dangerously-skip-permissions gibi bi mod yok bende suan ama boyle bir mod yapilabilirse sorunlarin bi kismi duzlecek (eb azindan bash denied by permissions errorlari)
