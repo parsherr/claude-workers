@@ -198,6 +198,7 @@
   },
   "active": "0f03ef9077b42daf",
   "lastOpenFiles": [
+    "CLAUDE.md.tmp.131075.fce550495ff0",
     "CLAUDE.md.tmp.61838.403133a845f2",
     "CLAUDE.md.tmp.61838.aada8a416217",
     "how-to-make-agent-team-system.md",
@@ -212,7 +213,6 @@
     "agent-generator/anatomy-worker.md",
     "agent-generator/anatomy-worker.md.tmp.61838.1ea6ce18760c",
     "agent-generator/anatomy-team-lead.md",
-    "agent-generator/anatomy-team-lead.md.tmp.61838.942a34d29526",
     "agent-generator/team-patterns.md",
     "researches/006-multi-agent-koordinasyon-pattern.md",
     "researches/005-task-queue-persistence.md",
