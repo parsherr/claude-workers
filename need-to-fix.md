@@ -27,4 +27,6 @@
      do and why you need this permission. Let the user decide how to proceed.
      ● Workflow aracına izin verilmedi.
 
-  
+- Error: You are not in plan mode. To enter plan mode, call the 
+     EnterPlanMode tool first. If your plan was already approved, 
+     continue with implementation.

@@ -1,4 +1,4 @@
-> **Bağlantılar:** [[CLAUDE]] | [[agent-generator/core-idea]] | [[agent-generator/rules]] | [[researches/002-ornek-agentlar-pattern-analizi]]
+> **Bağlantılar:** [[CLAUDE]] | [[agent-generator/core-idea]] | [[agent-generator/rules]] | [[agent-generator/anatomy-team-lead]] | [[agent-generator/anatomy-worker]] | [[researches/002-ornek-agentlar-pattern-analizi]]
 
 # Agent Pattern'ları ve Anti-Pattern'ları
 

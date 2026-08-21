@@ -1,4 +1,4 @@
-> **Bağlantılar:** [[CLAUDE]] | [[kiwimi-workers/the-project-idea]] | [[work-management-system-session-notes]]
+> **Bağlantılar:** [[CLAUDE]] | [[kiwimi-workers/the-project-idea]] | [[work-management-system-session-notes]] | [[agent-generator/anatomy-team-lead]] | [[agent-generator/anatomy-worker]] | [[agent-generator/system-design]]
 
 # Agent Generator — Temel Fikir
 

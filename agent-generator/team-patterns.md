@@ -1,4 +1,4 @@
-> **Bağlantılar:** [[CLAUDE]] | [[agent-generator/core-idea]] | [[agent-generator/rules]] | [[agent-generator/patterns-and-anti-patterns]] | [[researches/006-multi-agent-koordinasyon-pattern]]
+> **Bağlantılar:** [[CLAUDE]] | [[agent-generator/core-idea]] | [[agent-generator/rules]] | [[agent-generator/patterns-and-anti-patterns]] | [[agent-generator/anatomy-team-lead]] | [[agent-generator/anatomy-worker]] | [[agent-generator/system-design]] | [[researches/006-multi-agent-koordinasyon-pattern]]
 
 # Multi-Agent Team Pattern'ları
 
