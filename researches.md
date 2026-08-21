@@ -68,7 +68,13 @@ Bu bulgu şu fikri destekler/çürütür: ...
 
 | # | Slug | Başlık | Durum | Tarih |
 |---|------|--------|-------|-------|
-| — | — | Henüz research yok | — | — |
+| 001 | [[researches/001-iyi-agent-yazmanin-kurallari]] | İyi Agent Yazmanın Kuralları | complete | 2026-08-21 |
+| 002 | [[researches/002-ornek-agentlar-pattern-analizi]] | Örnek Agent'lar: Pattern ve Anti-Pattern Analizi | complete | 2026-08-21 |
+| 003 | [[researches/003-claude-code-headless-spawn-mekanizmasi]] | Claude Code Subprocess/Headless Spawn Mekanizması | complete | 2026-08-21 |
+| 004 | [[researches/004-worker-manager-ipc-iletisim]] | Worker-Manager İletişim Katmanı (IPC Seçenekleri) | complete | 2026-08-21 |
+| 005 | [[researches/005-task-queue-persistence]] | Task Queue Persistence (SQLite vs Dosya Tasarımı) | complete | 2026-08-21 |
+| 006 | [[researches/006-multi-agent-koordinasyon-pattern]] | Multi-Agent Koordinasyon Pattern'ları | complete | 2026-08-21 |
+| — | agent-generator/agent-generator.md | Agent Generator Agent yazıldı (Adım 4) | complete | 2026-08-21 |
 
 *(Her yeni research tamamlandığında bu tablo güncellenir.)*
 

@@ -20,7 +20,8 @@ Bu bilgiyi bir kez biriktirip defalarca kullanmak gerekiyor.
 
 ### Adım 2: Örnek Agent'ları İncele
 - Mevcut projelerdeki agent'lar analiz edilir
-- Ortak pattern'lar ve anti-pattern'lar belgelenir
+- edinilen tum bilgiler researches klasorunun altinda .md olarak kayit edilir
+- Ortak pattern'lar ve anti-pattern'lar belgelenir, bu belgeler agent-generator folderi altinda .md formasi formatinda kayit edilir
 
 ### Adım 3: Takım Hâlinde Çalışan Agent'ları Araştır
 - Multi-agent coordination: nasıl iletişim kuruyorlar?
